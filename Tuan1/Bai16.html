@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 16</title>
+
+    <style>
+        .block{
+            display: block; 
+            margin: 3px 0 3px 0;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="post" >
+        <h2>Travel reservation form</h2>
+        <h3>&#42; denotes mandotory</h3>
+        <label class="block" for="fullname">Full name&#42;:</label>
+        <input class="block" type="text" placeholder="FirstName LastName" id="fullname">
+        <label class="block" for="email">Email address&#42;:</label>
+        <input class="block" type="text" placeholder="EMAIL_ADDRESS" id="email">
+        <label class="block" for="select">Select Tour Package&#42;:</label>
+        <select name="" id="select">
+            <option value="Goa">Goa</option>
+        </select>
+        <label class="block" for="arrival">Arrival date&#42;:</label>
+        <input class="block" type="text" placeholder="m/d/y" id="arrival">
+        <labe class="block"l for="number">Number of persons&#42;:</labe>
+        <input class="block" type="text" placeholder="UNKNOWN_TYPE" id="number">
+        <label class="block">What would you want to avail?&#42;:</label>
+        <label class="block" for="boarding">Boarding<input type="radio" id="boarding"></label>
+        <label class="block" for="fooding">Fooding<input type="radio" id="fooding"></label>
+        <label class="block" for="sightseeing">Sight seeing<input type="radio" id="sightseeing"></label>
+        <label class="block" for="discount">Discount Coupon code:</label>
+        <input class="block" type="text" placeholder="UNKNOWN_TYPE" id="discount">
+        <label class="block" for="">Terms and condition*</label>
+        <label class="block"><input name="gr-agree" type="radio">I agree<input name="gr-agree" type="radio">I disagree</label>
+        <input class="block" type="submit" value="Complete reservation">
+    </form>
+</body>
+</html>
