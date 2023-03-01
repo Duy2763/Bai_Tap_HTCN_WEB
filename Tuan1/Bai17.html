@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 17</title>
+
+    <style>
+        .px-20{
+            margin-left: 20px;
+        }
+        .px-50{
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Câu a -->
+    <form action="" method="post" style="width: 50%; background-color: burlywood; margin-bottom: 100px;">
+        <h2 style="text-align: center;">Survey Form</h2>
+        <p>If you are interested in purchasing one or more of out products, before ordering
+            please complete some or all of the following survey for out marketing department.
+            Answering any question is optional, and all information will be kept stricly confidential.
+            Thank you very much for your time!
+        </p>
+
+        <p class="px-20"><label for="your_name">1. What is your name?</label></p>
+        <input class="px-50" id="your_name" type="text" name="" id="your_name" size="35">
+        <p class="px-20">2. What is your date of birth?</p>
+        <label class="px-50" class="px-50"label for="month1">Month:</label>
+        <input id="month1" type="text" list="month" size="10">
+        <datalist id="month">
+            <option value="January">January</option>
+            <option value="February">February</option>
+            <option value="March">March</option>
+            <option value="April">April</option>
+            <option value="May">May</option>
+            <option value="June">June</option>
+            <option value="July">July</option>
+            <option value="August">August</option>
+            <option value="September">September</option>
+            <option value="October">October</option>
+            <option value="November">November</option>
+            <option value="December">December</option>
+        </datalist>
+
+        <label for="date1">Date:</label>
+        <input id="date1" type="text" list="date" size="3">
+        <datalist id="date">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </datalist>
+
+        <label for="year1">Year:</label>
+        <input id="year1" type="text" list="year" size="5" list="year">
+        <datalist id="year">
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+        </datalist>
+
+        <p class="px-20">
+            <label for="your_mailing">3. What is your mailing address (if you would like to have
+                a hard copy of our catalog sent to you)?
+            </label>
+        </p>
+        <textarea class="px-50" name="" id="your_mailing" cols="50" rows="4"></textarea>
+
+        <p class="px-20"><label for="your_address">4. What is your address?</label></p>
+        <input class="px-50" id="your_address" type="text" name="" id="">
+
+        <p class="px-20">5. Have you viewed our online product catalog?</p>
+        <p class="px-50"><input name="group_yn" type="radio">Yes<input name="group_yn" type="radio">No</p>
+    
+        <p class="px-20">6. If so, what product(s), besides the one you are ordering, might you be interested
+         in purchasing in the future? (Check all that apply.)
+        </p>
+        <p class="px-50"><input id="vcr" type="checkbox"><label for="vcr">VCR</label></p>
+        <p class="px-50"><input id="bctv" type="checkbox"><label for="bctv">Big Screen TV</label></p>
+        <p class="px-50"><input id="ae" type="checkbox"><label for="ae">Audio Equipment</label></p>
+        <p class="px-50"><input id="ve" type="checkbox"><label for="vcr">Video Equipment</label></p>
+        <p class="px-50"><input id="ce" type="checkbox"><label for="vcr">Camera Equipment</label></p>
+        <p class="px-50"><label for="other">Other <input id="other" type="text" placeholder="Please List:"></label></p>
+        
+
+        <p class="px-20"> 
+            <label for="your_input">
+                7. Do you have any questions, comments or suggestions before proceeding to 
+                the Order Form?
+            </label>
+        </p>
+        <textarea class="px-50" name="" id="your_input" cols="50" rows="6" placeholder="Your Input: "></textarea>
+        <div style="display: flex; justify-content: center; padding: 20px 0;">
+            <input type="submit" value="Send Form">
+            <input type="button" value="Clear Form">
+        </div>
+    </form>
+
+    <hr>
+
+     <!-- Câu b -->
+     
+</body>
+</html>
