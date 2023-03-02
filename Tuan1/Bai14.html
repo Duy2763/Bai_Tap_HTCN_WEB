@@ -7,31 +7,33 @@
     <title>Bài 14</title>
 </head>
 <body>
-    <div>
+    <div style="width: 50%; box-shadow: 4px 4px 8px black; padding: 10px;">
         <h2>Contact Us</h2>
         <p>Use the following from to send a message to Example Cafe</p>
         <form action="" method="post">
-            <div>
-                <label for="input-email">Your email</label>
-                <input id="input-email" type="text">
+            <div style="display: flex; flex-direction: column; ">
+                <div style="display: flex;">
+                    <label for="input-email" style="margin-right: 100px;">Your email</label>
+                    <input id="input-email" type="text">
+                </div>
+                <div style="display: flex; align-items: center; margin: 5px 0px;">
+                    <label style="margin-right: 115px;" for="input-message">Message</label>
+                    <textarea name="" id="input-message" cols="100" rows="10"></textarea>
+                </div>
             </div>
-            <div style="display: flex; ">
-                <label style="text-align: center;" for="input-message">Message</label>
-                <textarea name="" id="input-message" cols="50" rows="10"></textarea>
-            </div>
-            <div style="display: inline-block;">
+            <div style="display: flex;  ">
                 <p>How did you hear of us?</p>
-                <select name="" id="">
+                <select name="" id="" style="margin-left: 13px;">
                     <option value="Google">Google</option>
                     <option value="Instagram">Instagram</option>
                     <option value="Facebook">Facebook</option>
                     <option value="Twitter">Twitter</option>
                 </select>
             </div>
-            <div>
-                <p>Newsletter</p>
-                <p>Ensure this box is checked if you would like to receive email updates</p>
+            <div style="display: flex; align-items: center;">
+                <p style="margin-right:  100px;">Newsletter</p>
                 <input type="checkbox" >
+                <p>Ensure this box is checked if you would like to receive email updates</p>
             </div>
             <div>
                 <input type="submit" name="" id="" value="New message">
