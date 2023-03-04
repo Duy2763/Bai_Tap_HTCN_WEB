@@ -7,6 +7,7 @@
 a {
     text-decoration: none;
     font-size: 20px;
+    text-shadow: -1px -1px palevioletred;
 }
 
 .navbar__item{
@@ -65,3 +66,6 @@ li:hover ul{
     display: block;
 }
 
+.navbar__item li:hover{
+    background-color: lightseagreen;
+}

@@ -1,0 +1,7 @@
+#example1 {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(images/css.png), url(images/html.png);
+    background-position: right bottom, left top;
+    background-repeat: no-repeat, repeat;
+}
