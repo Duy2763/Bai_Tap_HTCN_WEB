@@ -1,0 +1,13 @@
+.layout{
+    padding: 20px;
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 4px 4px 8px black;
+}
+
+
+
+div + div{
+    margin-left: 30px;
+}
