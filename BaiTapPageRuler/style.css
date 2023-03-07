@@ -24,11 +24,17 @@
 }
 
 .nav__left--item {
+    min-width: 75px;
     font-size: 20px;
     color: rgba(0, 0, 0, 0.7);
+    padding: 24px 32px;
 }
 
-.nav__center {}
+.nav__left--item:hover{
+    background-color: #eddfd2;
+    border-top: 2px white dashed;
+}
+
 
 .nav__right {
     display: flex;
@@ -55,6 +61,7 @@
 }
 
 .header-panel__image {
+    border-top: 2px white dashed;
     max-width: 100%;
     width: 100%;
 }
@@ -194,7 +201,7 @@
     display: flex;
     justify-content: space-evenly;
     height: 430px;
-    color: white;
+    color: lightgray;
     background-color: #1c1f26;
     align-items: center;
 }
@@ -211,7 +218,7 @@
     height: 35px;
     padding: 8px;
     background-color: #1c1f26;
-    color: white;
+    color: lightgray;
     border-radius: 5px;
 }
 
@@ -256,11 +263,7 @@
     font-size: 18px;
     border: .5px solid white;
     background-color: #459D7A;
-    color: white;
-}
-
-.footer__right--images{
-   
+    color: lightgray;
 }
 
 .footer__right--infor{
