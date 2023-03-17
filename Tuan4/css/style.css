@@ -5,6 +5,7 @@
 }
 
 #main{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     width: 100%;
     padding: 30px 0px;
     display: flex;
@@ -185,11 +186,11 @@
 #right{
     width: 26.4%;
     border-left: 1px solid rgb(225, 224, 224);
-    padding: 0px 25px;
 }
 
 .right__top{
     border-bottom: 1px solid rgb(225, 224, 224);
+    padding: 0px 25px;
 }
 
 .right__top--title{
@@ -238,16 +239,18 @@
 }
 
 .right_bottom{
-
+    padding: 0px 25px;
 }
 .right_bottom--content{
-
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
 }
 
 .right_bottom--item{
     display: flex;
     align-items: flex-start;
-    gap: 15px;
+    gap: 10px;
 }
 
 .right_bottom--item-right{
@@ -259,4 +262,44 @@
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+.right_bottom--typing{
+    display: flex;
+    flex-direction: column;
+    margin-top: -10px;
+}
+.right_bottom--typing-send{
+    display: flex;
+    position: relative;
+}
+.right_bottom--typing-send-input{
+    
+    width: 100%; 
+    height: 40px; 
+    padding: 0px 10px; 
+    font-size: 15px; 
+    background-color: rgb(225, 224, 224); 
+    outline: none; 
+    border: none;
+    
+}
+.right_bottom--typing-send-abs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: #f8f9fa;
+    width: 70px;
+    height: 40px;
+    left: 40px;
+    top: 5px;
+}
+.right_bottom--typing-send-icon{
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    right: 65px;
+    top: 25%;
+    
 }
