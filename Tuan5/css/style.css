@@ -15,7 +15,6 @@
     max-width: 1200px;
     margin: 0px auto;
     padding: 0px 15px;
-    height: 10000px;
 }
 
 .nav{
@@ -298,4 +297,93 @@
 .related__prod--images-item-info{
     padding: 20px;
     border: 2px solid #f2f2f4;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 70px 0px 40px 0px;
+}
+
+.footer h1{
+    padding-top: 40px;
+    padding-bottom: 15px;
+}
+.footer__input{
+    width: 380px;
+    display: flex;
+}
+.footer__input--email{
+   position: relative;
+}
+.footer__input--email input{
+    width: 266px;
+    height: 40px;
+    padding-left: 30px;
+    font-size: 16px;
+    border: none;
+    background-color: #f3f4f6;
+}
+.footer__input--email input:focus{
+    outline: none;
+}
+.footer__input--sub{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 114%;
+    height: 40px;
+    background-color: #00bdd6;
+    color: white;
+}
+.footer__info{
+    padding-top: 80px;
+    display: flex;
+    gap: 100px;
+}
+.footer__info--item h2{
+    padding-bottom: 15px;
+}
+
+.footer__info--item p{
+    padding-bottom: 10px;
+}
+
+.footer__end{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 60px;
+}
+
+.footer__info--select{
+    width: 114px;
+    height: 35px;
+    border: none;
+    background-color: #f3f4f6;
+    padding: 5px;
+    font-size: 17px;
+}
+
+.footer__info--select:focus{
+    outline: none;
+}
+
+.footer__info--brands{
+    display: flex;
+    gap: 5px;
+    color: #9098a9;
+    align-items: center;
+    
+}
+.footer__info--social{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.dot{
+    font-size: 10px;
 }
