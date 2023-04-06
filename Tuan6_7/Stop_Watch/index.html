@@ -8,10 +8,16 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <input type="text" value="0" id="number" class="number">
-    <button onclick="start()" class="start">Start</button>
-    <button onclick="pause()" class="pause">Pause</button>
-    <button onclick="clearScore()" class="clear">Clear</button>
+    <div class="main">
+        <div class="container">
+            <input type="text" value="0" id="number" class="number">
+            <div class="btn-group">
+                <button onclick="start()" class="start btn">Start</button>
+                <button onclick="pause()" class="pause btn">Pause</button>
+                <button onclick="clearScore()" class="clear btn">Clear</button>
+            </div>
+        </div>
+    </div>
 
     <script src="main.js"></script>
 </body>
