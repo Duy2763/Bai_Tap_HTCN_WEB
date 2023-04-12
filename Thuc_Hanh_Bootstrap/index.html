@@ -9,45 +9,50 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="themify-icons/themify-icons.css">
     <link rel="icon" type="image/x-icon" href="images/pageruler1-icon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div id="main">
-        <div id="nav">
-            <div class="nav__left">
-                <div class="nav__left--item">Shop</div>
-                <div class="nav__left--item">Offers</div>
-                <div class="nav__left--item">Our story</div>
-                <div class="nav__left--item">Blog</div>
+    <div id="main pr-8 pl-8">
+        <div class="nav d-flex justify-content-evenly align-items-center h-70">
+            <div class="nav__left d-flex justify-content-evenly gap-5">
+                <div class="nav__left--item fs-5 p-4 text-secondary">Shop</div>
+                <div class="nav__left--item fs-5 p-4 text-secondary">Offers</div>
+                <div class="nav__left--item fs-5 p-4 text-secondary">Our story</div>
+                <div class="nav__left--item fs-5 p-4 text-secondary">Blog</div>
             </div>
             <div class="nav__center">
                 <img src="images/logo.png" alt="Logo">
             </div>
-            <div class="nav__right">
-                <input class="nav__right--input" type="text" placeholder=" Search">
-                <p class="nav__right--cart"><i class="ti-shopping-cart-full"></i>Cart (0)</p>
-                <i class="nav__right--user ti-user"></i>
+            <div class="nav__right d-flex justify-content-evenly align-items-center gap-2">
+                <input class="nav__right--input h-90 w-200" type="text" placeholder=" Search">
+                <p class="nav__right--cart text-secondary mb-0"><i class="ti-shopping-cart-full"></i>Cart (0)</p>
+                <i class="nav__right--user ti-user text-secondary"></i>
             </div>
         </div>
-        <div id="header-panel">
+        <div class="header-panel position-relative">
             <div>
-                <img class="header-panel__image" src="images/Image 1.png" alt="">
+                <img class="header-panel__image border-top-2 border-white w-100 mw-100" src="images/Image 1.png" alt="">
             </div>
-            <div class="header-panel__tittle">
+            <div class="header-panel__tittle fs-6 position-absolute top-50">
                 <h1>Gift for your skin</h1>
-                <p style="font-size:20px;">Aliquip fugiat ipsum nostrud ex et eu incidunt quis minim dolore excepteur voluptate</p>
+                <p class="fs-5">Aliquip fugiat ipsum nostrud ex et eu incidunt quis minim dolore excepteur voluptate</p>
             </div>
         </div>
-        <div id="sub-nav">
-            <div class="sub-nav__left">
-                <div class="sub-nav__left--item">All product</div>
-                <div class="sub-nav__left--item">Face</div>
-                <div class="sub-nav__left--item">Body</div>
+        <div class="sub-nav d-flex justify-content-around p-5">
+            <div class="sub-nav__left d-flex justify-content-evenly fw-30">
+                <div class="sub-nav__left--item d-flex justify-content-center align-items-center p-4">All product</div>
+                <div class="sub-nav__left--item d-flex justify-content-center align-items-center p-4">Face</div>
+                <div class="sub-nav__left--item d-flex justify-content-center align-items-center p-4">Body</div>
             </div>
-            <div class="sub-nav__right">
+            <div class="sub-nav__right d-flex align-items-end justify-content-center gap-3 align-items-center text-secondary">
                 <input class="sub-nav__right--search" type="text" placeholder="  Search product...">
                 <div>
-                    <p class="sub-nav__right--sort">Sort by<i style="margin-left: 10px;" class="ti-align-left"></i></p>
+                    <p class="sub-nav__right--sort p-4 mb-0">Sort by<i style="margin-left: 10px;" class="ti-align-left"></i></p>
                 </div>
             </div>
         </div>
