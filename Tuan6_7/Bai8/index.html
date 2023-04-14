@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 8</title>
+</head>
+<body>
+    <div class="clock">...Loading</div>
+
+    <script>
+       function refreshClock() {
+            var d = new Date();
+            var day = d.getDay();
+            var date = d.getDate();
+            var month = d.getMonth();
+            var year = d.getFullYear();
+            var hours = d.getHours();
+            var minutes = d.getMinutes();
+            var seconds = d.getSeconds();
+            var days = "Chủ nhật;Thứ hai;Thứ ba;Thứ tư;Thứ năm;Thứ sáu;Thứ bảy;".split(";");
+            var months = "01,02,03,04,05,06,07,08,09,10,11,12".split(",");
+            var am_pm;
+
+            if (seconds < 10)
+                seconds = '0' + seconds;
+
+            if (minutes < 10)
+                minutes = '0' + minutes;
+
+            if (hours > 12) {
+                hours -= 12;
+                am_pm = 'PM';
+            } else {
+                am_pm = 'AM';
+            }
+            if (hours < 10)
+                hours = '0' + hours;
+
+
+            var disp = document.querySelector('.clock');
+            disp.innerHTML = 
+            `${days[day]} Ngày ${date}/${months[month]}/${year} 
+            Bây giờ là [${hours}:${minutes}:${seconds}] ${am_pm}
+            `
+       }
+       refreshClock();
+
+        
+    
+    </script>
+</body>
+</html>
