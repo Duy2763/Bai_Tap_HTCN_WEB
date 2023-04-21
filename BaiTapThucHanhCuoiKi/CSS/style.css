@@ -28,10 +28,34 @@
     color: #fff;
     font-weight: bold;
     font-size: 40px;
+    border-bottom: gray 2px solid;
+}
+
+.menu{
+    margin-left: 80px;
 }
 
 .menu button{
     padding: 10px;
     min-width: 100px;
+    border: none;
+    background-color: #fff;
+    font-size: 20px;
+    color: darkcyan;
+    outline: none;
+}
+.menu button:focus{
+    outline: none;
+}
+
+.menu button:hover{
+    background-color: lightgray;
+    color: black;
+    
+}
+
+.table{
+    border-top: gray 2px solid;
+    border-bottom: gray 2px solid;
 }
 
