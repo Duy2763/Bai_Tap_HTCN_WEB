@@ -70,16 +70,23 @@
     background-color: rgba(0, 0, 0, 0.5);
     opacity: 0;
     pointer-events: none;
+    transition: all 0.5s ease-in-out;
 }
 .modal-container{
     position: relative;
     left: 50%;
-    top: 50%;
+    top: 25%;
     transform: translate(-50%, -50%);
     width: 40%;
-    padding: 10px;
+    padding: 10px 30px;
     background-color: #fff;
 }
+
+.modal1.show .modal-container{
+    top: 50%;
+    transition: all 0.5s ease-in-out;
+}
+
 .modal-container__title{
     color: lightslategray;
     font-weight: bold;
@@ -130,4 +137,5 @@
 .show{
     opacity: 1;
     pointer-events: all;
+    transition: all 0.5s ease-in-out;
 }
