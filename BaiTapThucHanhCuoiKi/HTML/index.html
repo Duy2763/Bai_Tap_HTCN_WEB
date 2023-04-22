@@ -45,26 +45,26 @@
                 </div>
                 <div class="modal-container__item">
                     <label for="txt-mabenhnhan">Mã bệnh nhân</label>
-                    <input type="text" id="txt-mabenhnhan" placeholder="Mã bệnh nhân">
+                    <input onblur="chkMa()" type="text" id="txt-mabenhnhan" placeholder="Mã bệnh nhân">
                     <p id="ma-error">(*)BN-YYYYYY</p>
                 </div>
                 <div class="modal-container__item">
                     <label for="txt-matkhau">Mật khẩu</label>
-                    <input type="password" id="txt-matkhau" placeholder="Mật khẩu">
+                    <input onblur="chkPass()" type="password" id="txt-matkhau" placeholder="Mật khẩu">
                     <p id="matkhau-error">(*)</p>
                 </div>
                 <div class="modal-container__item">
-                    <label for="txt-date">Mật khẩu</label>
-                    <input type="date" id="txt-date" placeholder="mm/dd/yyyy">
+                    <label for="txt-date">Ngày khám</label>
+                    <input onblur="chkNgayKham()" type="date" id="txt-date" placeholder="mm/dd/yyyy">
                     <p id="date-error">(*)</p>
                 </div>
                <div class="modal-container__service">
-                    <input type="checkbox">
-                    <label for="">Khám bệnh theo yêu cầu</label>
-                    <input type="checkbox">
-                    <label for="">Điều trị ngoại trú</label>
-                    <input type="checkbox">
-                    <label for="">Bác sĩ theo yêu cầu</label>
+                    <input type="checkbox" id="chk-1">
+                    <label for="chk-1">Khám bệnh theo yêu cầu</label>
+                    <input type="checkbox" id="chk-2">
+                    <label for="chk-2">Điều trị ngoại trú</label>
+                    <input type="checkbox" id="chk-3">
+                    <label for="chk-3">Bác sĩ theo yêu cầu</label>
                     <p id="service-error">(*)</p>
                </div>
                <div class="modal-container__item">
@@ -72,10 +72,11 @@
                 <select name="" id="txt-chuyenkhoa">
                     <option value="Ngoại tổng quát">Ngoại tổng quát</option>
                     <option value="Nội tổng quát">Nội tổng quát</option>
+                    <option value="Nhi">Nhi</option>
                 </select>
                 <div class="modal-container__btn">
-                    <button id="btn-datlich">Đặt lịch</button>
-                    <button id="btn-close">Close</button>
+                    <button id="btn-datlich" class="butt">Đặt lịch</button>
+                    <button id="btn-close" class="butt">Close</button>
                 </div>
             </div>
             </div>

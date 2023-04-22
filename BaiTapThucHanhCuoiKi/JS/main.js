@@ -9,6 +9,8 @@ var btn_close = $('#btn-close');
 var btn_addVaoBang = $('#btn-datlich');
 var modal_container = $('.modal-container');
 var tbody = $('tbody');
+var chuyenKhoaSelect = $('#txt-chuyenkhoa');
+var chkList = $$('input[type="checkbox"]');
 var data = [];
 
 function render() {
@@ -23,8 +25,8 @@ function render() {
             <td>${data[key].PhuThu}</td>
             <td>${data[key].ChuyenKhoa}</td>
             <td>
-                <button onclick="delete_item(${key})">Delete</button>
-                <button onclick="edit_item(${key})">Edit</button>
+                <button class="butt" onclick="delete_item(${key})">Delete</button>
+                <button class="butt" onclick="edit_item(${key})">Edit</button>
             </td>
         </tr>
         `;
@@ -40,9 +42,6 @@ function delete_item(i) {
 
 function edit_item(i) {
     modal.classList.add('show');
-
-    var chuyenKhoaSelect = $('#txt-chuyenkhoa');
-    var chkList = $$('input[type="checkbox"]')
     $('#txt-mabenhnhan').value = data[i].Ma;
     $('#txt-matkhau').value = data[i].MatKhau;
     $('#txt-date').value = data[i].NgayKham;
@@ -53,8 +52,6 @@ function edit_item(i) {
 }
 
 function clearInput() {
-    var chuyenKhoaSelect = $('#txt-chuyenkhoa');
-    var chkList = $$('input[type="checkbox"]')
     $('#txt-mabenhnhan').value = "";
     $('#txt-matkhau').value = "";
     $('#txt-date').value = "";
@@ -115,16 +112,87 @@ btn_addVaoBang.addEventListener('click', (e) => {
         ListCheckbox: listCheckbox
     }
 
-    let index = data.findIndex((a) => a.Ma == item.Ma);
-    if (index >= 0) {
-        data.splice(index, 1, item);
+    if (validate()) {
+        let index = data.findIndex((a) => a.Ma == item.Ma);
+        if (index >= 0) {
+            data.splice(index, 1, item);
+            alert("Sửa lịch thành công");
+            clearInput();
+        } else {
+            data.push(item);
+            alert("Đặt lịch thành công");
+            clearInput();
+        }
     } else {
-        data.push(item);
+        alert("Đặt lịch thất bại");
     }
 
     render();
-    clearInput();
-    alert("Đặt lịch thành công")
  });
+
+
+ function chkMa() {
+    var ma = $('#txt-mabenhnhan').value;
+    var warn = $('#ma-error');
+    var regex = /^BN-[0-9]{5}$/;
+
+    if (ma == null || ma == '') {
+        warn.innerHTML = "Mã bệnh nhân không được để trống!";
+    } else if (!regex.test(ma)) {
+        warn.innerHTML = "Mã bệnh nhân có dạng BN-YYYYY(BN cố định và năm số)!";
+    } else {
+        warn.innerHTML = "";
+        return true;
+    }
+    return false;
+ }
+
+ function chkPass() {
+    var matkhau = $('#txt-matkhau').value;
+    var warn = $('#matkhau-error');
+    var regex = /.{6,}/;
+
+    if (matkhau == null || matkhau == '') {
+        warn.innerHTML = "Mật khẩu không được để trống!";
+    } else if (!regex.test(matkhau)) {
+        warn.innerHTML = "Mật khẩu từ 6 kí tự bất kì trở lên!";
+    } else {
+        warn.innerHTML = "";
+        return true;
+    }
+    return false;
+ }
+
+ function chkDichVu() {
+    var warn = $('#service-error');
+    if (!(chkList[0].checked || chkList[1].checked || chkList[2].checked)) {
+        warn.innerHTML = "Phải chọn một dịch vụ!"
+    } else {
+        warn.innerHTML = "";
+        return true;
+    }
+    return false;
+ }
+
+ function chkNgayKham() {
+    var date = $('#txt-date').value;
+    var warn = $('#date-error');
+    if (Date.parse(date) > new Date()) {
+        warn.innerHTML = "Ngày khám phải sau ngày hiện tại";
+    } else {
+        warn.innerHTML = "";
+        return true;
+    }
+    return false;
+ }
+
+ function validate() {
+    if (chkPass() && chkDichVu() && chkNgayKham() && chkMa()) {
+        return true;
+    } 
+    return false;
+ }
+
+
 
  
